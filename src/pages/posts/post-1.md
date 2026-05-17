@@ -8,7 +8,7 @@ image:
   url: "/nextframe.jpeg"
   alt: "xx"
 tags: [""]
-pubDate: 'August 29, 2025'
+pubDate: 'August 21, 2025'
 ---
 
 
