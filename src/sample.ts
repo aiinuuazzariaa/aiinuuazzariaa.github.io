@@ -1,6 +1,6 @@
 const author = {
   name: `Ainu Azzaria`,
-  nickname: `ainu`,
+  nickname: `ainuuazzariaa`,
   tiktok: `https://www.tiktok.com/@indieteamofone`,
   ig: `https://www.instagram.com/aiinuuazzariaa/`,
   x: `https://x.com/indieteamofone`,
