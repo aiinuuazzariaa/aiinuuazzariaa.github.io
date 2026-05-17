@@ -45,6 +45,7 @@ const { frontmatter } = Astro.props;
                 </div>
                 <slot />
             </div>
+            <div class="text-justify">{frontmatter.desc}</div>
         </div>
     </section>
 
