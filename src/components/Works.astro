@@ -1,6 +1,6 @@
 ---
 import Bars from "./Bars.astro";
-import { buy } from "../sample";
+import { port } from "../sample";
 
 import svgUnderline from "../assets/underline.svg";
 import arrowCard from "../assets/arrow-card.svg";
@@ -44,7 +44,7 @@ const portfolio = [
     {
       portfolio.map((item) => (
         <a
-          href={buy.link}
+          href={port.link}
           target="_blank"
           class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)]"
         >

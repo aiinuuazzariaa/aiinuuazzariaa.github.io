@@ -8,8 +8,12 @@ const author = {
 };
 
 const buy = {
-  title: `My Github`,
+  title: `See My Github`,
   link: `https://github.com/aiinuuazzariaa`,
 };
 
-export { author, buy };
+const port = {
+  link: `https://bit.ly/aiinuuazzariaaportfolio`,
+};
+
+export { author, buy, port };
