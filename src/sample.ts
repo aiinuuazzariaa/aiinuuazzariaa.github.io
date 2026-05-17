@@ -8,7 +8,7 @@ const author = {
 };
 
 const buy = {
-  title: `See on Github`,
+  title: `Github Saya`,
   link: `https://github.com/aiinuuazzariaa`,
 };
 
