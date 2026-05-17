@@ -1,25 +1,20 @@
 ---
 layout: ../../components/MarkdownPost.astro
-title: "Warren Buffett’s Seven Rules: An Economic Masterclass in Value Investing"
+title: "NextFrame 2025"
 author: 
-  name: "Jessica Stillman"
+  name: "Ainu Azzaria"
   url: "https://images.pexels.com/photos/935743/pexels-photo-935743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 image:
-  url: "https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  url: "/nextframe.jpeg"
   alt: "xx"
 tags: [""]
-pubDate: 'Feb 09, 2025'
-likes: '12.3k'
-comments: '119'
+pubDate: 'May 17, 2026'
+# likes: '12.3k'
+# comments: '119'
 ---
 
 
-Look around at social media, politics, or the news and you’re likely to agree with the bodybuilding champ-turned-movie star-turned-governor of California.
-
-Whether he was lifting weights for five hours a day or trying to hack a path through the thicket of California politics, Schwarzenegger claims he was consistently happy. What allowed him to maintain a positive outlook despite personal setbacks and tough jobs? In his book Be Useful, Schwarzenegger boils down his philosophy to just four words.
-
-
-You might think a simple mantra is too flimsy a thing to be actually meaningful in the face of real-life struggle. But according to top psychologists, the Governator actually manages to capture profound truths about human flourishing in one quick motto.
+NEXTFRAME 2025 is one of the work programs of the Innovation Development Program (IndevPro) of the Faculty of Information Technology (FTI) at Merdeka University (UNMER) Malang. NEXTFRAME 2025 features a seminar on UI and UX. The goal of NEXTFRAME is to promote the Faculty of Information Technology at Merdeka University Malang, as well as IndevPro as a faculty-level organization. The seminar was held at the Malang Creative Center (MCC), featuring Mokhammad Fahreza Sugiono as a UI/UX Design expert from Dipa Inhouse, one of the top agencies in Indonesia. The presence of this experienced speaker further increased participants' enthusiasm. Participants came from students representing 15 senior high schools and vocational schools (SMA/SMK) across the Greater Malang area.
 
 
 
