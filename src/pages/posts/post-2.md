@@ -1,27 +1,14 @@
 ---
 layout: ../../components/MarkdownPost.astro
-title: "The Looming Economic Catastrophe: China on the Brink of Collapse"
+title: "Chinese Indonesian Festival (CHIFEST) 2025"
 author: 
-  name: "Kostya Jarvis"
+  name: "Ainu Azzaria"
   url: "https://images.pexels.com/photos/28368876/pexels-photo-28368876/free-photo-of-a-man-in-black-sitting-on-a-red-couch.jpeg?auto=compress&cs=tinysrgb&w=1200"
 image:
-  url: "https://images.pexels.com/photos/7693240/pexels-photo-7693240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  url: "/chifest.jpeg"
   alt: "xx"
 tags: [""]
-pubDate: 'Oct 15, 2025'
-likes: '6.3k'
-comments: '49'
+pubDate: 'July 26-27, 2025'
 ---
 
-
-Look around at social media, politics, or the news and you’re likely to agree with the bodybuilding champ-turned-movie star-turned-governor of California.
-
-
-Whether he was lifting weights for five hours a day or trying to hack a path through the thicket of California politics, Schwarzenegger claims he was consistently happy. What allowed him to maintain a positive outlook despite personal setbacks and tough jobs? In his book Be Useful, Schwarzenegger boils down his philosophy to just four words.
-
-
-You might think a simple mantra is too flimsy a thing to be actually meaningful in the face of real-life struggle. But according to top psychologists, the Governator actually manages to capture profound truths about human flourishing in one quick motto.
-
-
-
-
+Chinese Indonesian Festival (CHIFEST) is a Chinese-Indonesian cultural celebration held at Ma Chung University. The series of events at CHIFEST 2025 is also very diverse. CHIFEST features an Asian Wave Party, K-pop dance performances, cosplay, and a DJ. The Festival Band by Mafest will showcase Gaines, Roman Century, Settleblaze, and the Ma Chung Music Club. The highlight of the event is a special performance by Hivi!. In addition, visitors can also participate in or watch a variety of Mandarin language competitions such as storytelling, short video, quiz bowl, children's coloring, and a fashion show. There are more than 50 culinary tenants offering both halal and non-halal menus, ranging from traditional to contemporary food.
