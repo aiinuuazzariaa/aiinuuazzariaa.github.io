@@ -7,31 +7,46 @@ import protoIcon from "../assets/services/proto.svg";
 import svgPinkStar from "../assets/pink-star.svg";
 
 const stats = [
-  { name: `projects`, value: "50+" },
+  { name: `projects`, value: "15" },
   { name: `Client ROI`, value: "120%" },
-  { name: `Experience`, value: "6 years" },
+  { name: `Experience`, value: "4 years" },
 ];
 
 const services = [
   {
-    name: `User Research`,
-    desc: `Services we’re providing that derive 99% result`,
+    name: `UI/UX Designer`,
+    company: `PT Eve Teknologi Indonesia`,
+    date: `Mar 2026 - Present`,
+    desc: `• Update components and layout Evetech using Figma. \n• Update components and layout Rasamadu Heritage Dashboard using Figma. \n• Update components and layout Evewash using Figma. \n• Testing Evewash.`,
     icon: researchIcon,
   },
   {
-    name: `Wireframing`,
-    desc: `Services we’re providing that derive 99% result`,
+    name: `Mobile Developer`,
+    company: `PT Thunder Labs Indonesia`,
+    date: `Jan 2026 - Present`,
+    desc: `• Create VernonEdu for Mentor mobile app using Flutter.\n• Create VernonEdu for Student mobile app using Flutter.\n• Create Sahil mobile app using Flutter.\n• Update content website Kanana Retreat. \n• Testing Sahil Dashboard. \n• Create a Data Matching System (SiPaData) using Python.`,
     icon: wireIcon,
   },
   {
-    name: `UI Designing`,
-    desc: `Services we’re providing that derive 99% result`,
+    name: `Graphic Designer`,
+    company: `Kekitaan`,
+    date: `May 2025 - Jun 2025`,
+    desc: `• Create a content based on song lyrics and their meaning. \n• Create a content based on song chords and their meaning. \n• Share a content song lyric or chord in social media.`,
     icon: uiIcon,
   },
   {
-    name: `Prototyping`,
-    desc: `Services we’re providing that derive 99% result`,
+    name: `UI/UX Designer`,
+    company: `PT Flow Byte Digital`,
+    date: `Jan 2025 - Apr 2025`,
+    desc: `• Create a user dashboard page display for the Freelancers Website using Figma. \n• Create a freelancers website order page display and mobile for the Freelancers Website using Figma. \n• Create a project website page display and mobile for the Freelancers Website using Figma. \n• Create a landing page display for students on the Flow Camp Website using Figma. \n• Create a classes studied page display for the Flow Camp Website using Figma. \n• Create a classes completed page display for the Flow Camp Website using Figma. \n• Create a classes camp page display for the Flow Camp Website using Figma.`,
     icon: protoIcon,
+  },
+  {
+    name: `Frontend Developer`,
+    company: `PT Vokasi Indonesia Sejahtera`,
+    date: `Jun 2025 - Nov 2025`,
+    desc: `• Create a page display for the pesenkamar.com web application using blade php. \n• Create a layout and home page for the quantumbook.id web application using blade php. \n• Create a blog post page admin display for the quantumbook.id web application using blade php. \n• Carry out testing on products to ensure that they work well and meet specified specifications.`,
+    icon: researchIcon,
   },
 ];
 ---
@@ -47,9 +62,7 @@ const services = [
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-[60%_40%] py-10 relative">
       <div class="flex items-end">
-        <h1 class="text-4xl">
-          Services we’re providing that derive 99% result
-        </h1>
+        <h1 class="text-4xl">My Experience</h1>
         <svg
           class="size-20"
           viewBox="0 0 37 35"
@@ -83,14 +96,16 @@ const services = [
         }
       </div>
       <div
-        class="grid grid-cols-2 border-r-2 border-t-2 md:border-r-0 md:border-t-0"
+        class="grid grid-cols-1 border-r-2 border-t-2 md:border-r-0 md:border-t-0"
       >
         {
           services.map((item) => (
             <div class="flex flex-col gap-2 p-4 md:p-6 border-l-2 border-b-2">
               <img src={item.icon.src} width="40" alt="" />
               <h3 class="text-xl font-medium">{item.name}</h3>
-              <p>{item.desc}</p>
+              <p class="text-sm">{item.company}</p>
+              <p class="text-sm text-gray-400">{item.date}</p>
+              <p class=" text-justify whitespace-pre-line">{item.desc}</p>
             </div>
           ))
         }

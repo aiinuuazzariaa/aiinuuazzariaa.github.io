@@ -1,14 +1,13 @@
 ---
 layout: ../../components/MarkdownPost.astro
-title: "NEXTFRAME 2025"
+title: "Ma Chung University Information Systems Study Program Exhibition"
 author: 
   name: "Ainu Azzaria"
-  url: "https://images.pexels.com/photos/935743/pexels-photo-935743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  url: "https://machung.ac.id/berita/pameran-sistem-informasi-2025/"
 image:
-  url: "/nextframe.jpeg"
+  url: "/pameranSIA.jpeg"
   alt: "xx"
 tags: [""]
-pubDate: 'August 21, 2025'
+pubDate: 'December 04, 2025'
+description: "The Exhibition of the Information Systems Study Program at Ma Chung University, themed 'Accounting Information Systems for MSMEs (Micro, Small, and Medium Enterprises)', was organized by Meme Susilowati, S.Kom., MMSI, as the lecturer of the Accounting Information Systems course. The exhibition was participated in by 22 students from the Information Systems Study Program, showcasing the results of their software development work. Throughout the process, students selected an accounting cycle to be developed into a software application, conducted case studies, identified problems and technological solutions, designed system concepts, and built an Accounting Information System (AIS) software that was then tested directly by exhibition visitors."
 ---
-
-NEXTFRAME 2025 is one of the work programs of the Innovation Development Program (IndevPro) of the Faculty of Information Technology (FTI) at Merdeka University (UNMER) Malang. NEXTFRAME 2025 features a seminar on UI and UX. The goal of NEXTFRAME is to promote the Faculty of Information Technology at Merdeka University Malang, as well as IndevPro as a faculty-level organization. The seminar was held at the Malang Creative Center (MCC), featuring Mokhammad Fahreza Sugiono as a UI/UX Design expert from Dipa Inhouse, one of the top agencies in Indonesia. The presence of this experienced speaker further increased participants enthusiasm. Participants came from students representing 15 senior high schools and vocational schools (SMA/SMK) across the Greater Malang area.
