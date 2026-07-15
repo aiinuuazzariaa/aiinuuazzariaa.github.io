@@ -3,14 +3,9 @@ import researchIcon from "../assets/services/research.svg";
 import wireIcon from "../assets/services/wire.svg";
 import uiIcon from "../assets/services/ui.svg";
 import protoIcon from "../assets/services/proto.svg";
+import Bars from "./Bars.astro";
 
 import svgPinkStar from "../assets/pink-star.svg";
-
-const stats = [
-  { name: `projects`, value: "15" },
-  { name: `Client ROI`, value: "120%" },
-  { name: `Experience`, value: "4 years" },
-];
 
 const services = [
   {
@@ -44,7 +39,7 @@ const services = [
   {
     name: `Frontend Developer`,
     company: `PT Vokasi Indonesia Sejahtera`,
-    date: `Jun 2025 - Nov 2025`,
+    date: `Jun 2022 - Nov 2022`,
     desc: `• Create a page display for the pesenkamar.com web application using blade php. \n• Create a layout and home page for the quantumbook.id web application using blade php. \n• Create a blog post page admin display for the quantumbook.id web application using blade php. \n• Carry out testing on products to ensure that they work well and meet specified specifications.`,
     icon: researchIcon,
   },
@@ -62,7 +57,7 @@ const services = [
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-[60%_40%] py-10 relative">
       <div class="flex items-end">
-        <h1 class="text-4xl">My Experience</h1>
+        <h1 class="text-4xl">Work Experience</h1>
         <svg
           class="size-20"
           viewBox="0 0 37 35"
@@ -82,34 +77,35 @@ const services = [
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-[30%_70%] border-t-2">
-      <div
-        class="flex flex-col border-l-2 border-r-2 md:border-b-2 md:border-r-0 md:border-l-0"
-      >
-        {
-          stats.map((item) => (
-            <div class="flex flex-col p-3 md:p-6  md:border-b-2 last:border-none">
-              <h1 class="text-2xl font-medium">{item.value}</h1>
-              <p class="text-sm">{item.name}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-10">
+      {
+        services.map((item) => (
+          <div class="bg-white p-6 border-3 border-black shadow-[6px_6px_0px_#000] flex flex-col justify-between relative group hover:translate-y-[-2px] transition-transform">
+            <div>
+              <div class="flex justify-between items-start gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src={item.icon.src} width="40" alt="icon" />
+                  <div>
+                    <h3 class="text-md md:text-lg font-bold group-hover:text-[var(--yellow)] transition-colors duration-200">
+                      {item.name}
+                    </h3>
+                    <p class="text-xs md:text-sm font-medium text-gray-700">
+                      {item.company}
+                    </p>
+                  </div>
+                </div>
+                <span class="bg-yellow-100 text-[10px] md:text-xs font-bold px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000] whitespace-nowrap">
+                  {item.date}
+                </span>
+              </div>
+              <p class="text-xs md:text-sm text-justify whitespace-pre-line leading-relaxed">
+                {item.desc}
+              </p>
             </div>
-          ))
-        }
-      </div>
-      <div
-        class="grid grid-cols-1 border-r-2 border-t-2 md:border-r-0 md:border-t-0"
-      >
-        {
-          services.map((item) => (
-            <div class="flex flex-col gap-2 p-4 md:p-6 border-l-2 border-b-2">
-              <img src={item.icon.src} width="40" alt="" />
-              <h3 class="text-xl font-medium">{item.name}</h3>
-              <p class="text-sm">{item.company}</p>
-              <p class="text-sm text-gray-400">{item.date}</p>
-              <p class=" text-justify whitespace-pre-line">{item.desc}</p>
-            </div>
-          ))
-        }
-      </div>
+            <Bars />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

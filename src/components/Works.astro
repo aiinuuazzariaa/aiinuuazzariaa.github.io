@@ -1,37 +1,44 @@
 ---
 import Bars from "./Bars.astro";
-import { port } from "../sample";
 
 import svgUnderline from "../assets/underline.svg";
 import arrowCard from "../assets/arrow-card.svg";
 
 const portfolio = [
   {
-    name: "E-Commerce ERIGO Website",
-    desc: `ERIGO website is designed to provide information about the various products offered by ERIGO.`,
-    cover: `/Erigo.png`,
+    name: "PlayArena",
+    desc: "PlayArena is a sports facility booking application designed to help users easily search for, view, and reserve sports fields. The application provides detailed information about available venues, including location, facilities, schedules, and pricing. With an intuitive and user-friendly interface, PlayArena enables users to make reservations efficiently, manage booking schedules, and streamline the process of accessing sports facilities for various activities.",
+    cover: "",
+    link: "https://github.com/aiinuuazzariaa/playarena",
+    categories: ["mobile"],
   },
   {
-    name: "FindPhone Website",
-    desc: `FindPhone website is designed to provide information about electronic products offered by a company.`,
-    cover: `/FindPhone.png`,
-  },
-  {
-    name: "GoRef by Groperti",
-    desc: `GoRef is designed to generate income for individuals by allowing them to earn money through property recommendations to people around them.`,
-    cover: `/GoRef.png`,
+    name: "Revenue Cycle Revenue Cycle (Accounting Information Systems)",
+    desc: "Revenue Cycle is an application designed to manage a business owner’s revenue, including both primary revenue and additional sources of income. The application also supports the management of customer receivables, enabling business owners to record, monitor, and control outstanding payments effectively. By providing structured and integrated financial information, Revenue Cycle helps entrepreneurs improve cash flow management, increase financial transparency, and support better decision-making in their business operations.",
+    link: "https://github.com/aiinuuazzariaa/revenue-cycle",
+    cover: "",
+    categories: ["web"],
   },
   {
     name: "Zocco Cafe Mobile",
-    desc: `Zocco Cafe Mobile application is designed to provide information about the menu offered by the café, as well as payment options that can be made using cash or QRIS.`,
-    cover: `/Zocco.png`,
+    desc: "Zocco Cafe Mobile application is designed to provide information about the menu offered by the café, as well as payment options that can be made using cash or QRIS.",
+    cover: "/zocco.png",
+    link: "https://www.figma.com/design/oPyECfQgnWDiy44UkyfMB8/Zocco?node-id=365-32&t=m2LXs2c6u7BZCato-1",
+    categories: ["design", "mobile"],
+  },
+  {
+    name: "GoRef by Groperti",
+    desc: "GoRef is designed to generate income for individuals by allowing them to earn money through property recommendations to people around them.",
+    cover: "/goref.png",
+    link: "https://www.figma.com/design/LGiQI9dfwd78vLHnbHWwSv/GroPerti?node-id=32-2&t=m2LXs2c6u7BZCato-1",
+    categories: ["design"],
   },
 ];
 ---
 
 <section class="py-25 space-y-10 px-5" id="work">
   <div class="max-w-md mx-auto relative">
-    <h1 class="text-4xl font-medium text-center">My Portfolio</h1>
+    <h1 class="text-4xl font-medium text-center">Projects</h1>
     <img
       src={svgUnderline.src}
       alt="arrow"
@@ -44,23 +51,90 @@ const portfolio = [
     {
       portfolio.map((item) => (
         <a
-          href={port.link}
+          href={item.link}
           target="_blank"
-          class="flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)]"
+          class="project-card flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_rgba(0,0,0,0.35)]"
         >
-          <div class="w-full h-[200px] overflow-hidden border-2">
-            <img src={item.cover} alt="" class="w-full h-full object-cover" />
+          <div class="w-full h-[220px] overflow-hidden border-2 border-black relative bg-[var(--yellow)] flex items-center justify-center">
+            {item.cover && item.cover !== "" && item.cover !== "/" ? (
+              <img
+                src={item.cover}
+                alt={item.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            ) : (
+              <div class={`w-full h-full flex flex-col items-center justify-center p-4 select-none group-hover:scale-105 transition-transform duration-300 relative overflow-hidden ${
+                item.categories.includes("mobile")
+                  ? "bg-[#ff8da1]"
+                  : item.categories.includes("web")
+                    ? "bg-[#7ae2ff]"
+                    : "bg-[#ffd426]"
+              }`}>
+                <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#000_2px,transparent_2.5px)] [background-size:16px_16px] pointer-events-none"></div>
+                <div class="relative bg-white border-3 border-black p-4 rotate-[-3deg] shadow-[4px_4px_0px_#000] flex flex-col items-center gap-2 max-w-[85%]">
+                  <span class="text-5xl filter drop-shadow-[2px_2px_0px_#000]">
+                    {item.categories.includes("mobile") ? "📱" : item.categories.includes("web") ? "💻" : "🎨"}
+                  </span>
+                  <span class="text-[10px] font-black uppercase tracking-widest text-white bg-black px-2 py-0.5 border border-black rounded-sm">
+                    {item.categories[0]}
+                  </span>
+                  <span class="text-xs font-black text-black text-center whitespace-nowrap">
+                    Preview Pending
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
-          <div class="space-y-1 pt-4">
-            <div class="flex pr-2">
-              <h2 class="text-xl font-medium flex-1">{item.name}</h2>
-              <img src={arrowCard.src} alt="arrow" width="25" />
+          <div class="space-y-2 pt-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start gap-4 justify-between pr-2">
+                <h2 class="text-xl font-bold group-hover:text-[var(--yellow)] transition-colors duration-200 leading-tight">
+                  {item.name}
+                </h2>
+                <img
+                  src={arrowCard.src}
+                  alt="arrow"
+                  width="25"
+                  class="mt-1"
+                />
+              </div>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed text-justify">
+                {item.desc}
+              </p>
             </div>
-            <p class="mr-20">{item.desc}</p>
+            <div class="flex flex-wrap gap-2 pt-4">
+              {item.categories.map((cat) => (
+                <span class="bg-gray-100 text-[10px] uppercase font-black px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000]">
+                  #{cat}
+                </span>
+              ))}
+            </div>
           </div>
           <Bars />
         </a>
       ))
     }
+  </div>
+
+  <div class="flex justify-center pt-10">
+    <a
+      href="/project"
+      class="px-6 py-3 text-base md:text-lg font-black border-3 border-black bg-[var(--yellow)] shadow-[4px_4px_0px_#000] cursor-pointer transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000] flex items-center gap-2"
+    >
+      View All Projects
+      <svg
+        class="size-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 12H19M19 12L12 5M19 12L12 19"
+          stroke="black"
+          stroke-width="3"
+          stroke-linecap="square"
+        />
+      </svg>
+    </a>
   </div>
 </section>

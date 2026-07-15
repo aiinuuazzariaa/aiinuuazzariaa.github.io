@@ -1,0 +1,244 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Bars from "../components/Bars.astro";
+
+import svgPinkStar from "../assets/pink-star.svg";
+import svgYellowUnderline from "../assets/underline.svg";
+import arrowCard from "../assets/arrow-card.svg";
+import { port } from "../sample";
+
+const categories = [
+  { id: "all", name: "All Projects" },
+  { id: "web", name: "Website" },
+  { id: "mobile", name: "Mobile App" },
+  { id: "design", name: "UI/UX Design" },
+];
+
+const projects = [
+  {
+    name: "Weathertute",
+    desc: "Weathertute is a weather monitoring application designed to provide real-time weather information based on the user’s current location. The application automatically detects the user’s geographic position and retrieves up-to-date weather conditions for that specific area, including temperature, weather status, and atmospheric conditions. By delivering accurate and location-based weather data, Weathertute helps users stay informed and better plan their daily activities according to current weather conditions.",
+    cover: "",
+    link: "https://github.com/aiinuuazzariaa/weathertute",
+    categories: ["mobile"],
+  },
+  {
+    name: "PlayArena",
+    desc: "PlayArena is a sports facility booking application designed to help users easily search for, view, and reserve sports fields. The application provides detailed information about available venues, including location, facilities, schedules, and pricing. With an intuitive and user-friendly interface, PlayArena enables users to make reservations efficiently, manage booking schedules, and streamline the process of accessing sports facilities for various activities.",
+    cover: "",
+    link: "https://github.com/aiinuuazzariaa/playarena",
+    categories: ["mobile"],
+  },
+  {
+    name: "Revenue Cycle Revenue Cycle (Accounting Information Systems)",
+    desc: "Revenue Cycle is an application designed to manage a business owner’s revenue, including both primary revenue and additional sources of income. The application also supports the management of customer receivables, enabling business owners to record, monitor, and control outstanding payments effectively. By providing structured and integrated financial information, Revenue Cycle helps entrepreneurs improve cash flow management, increase financial transparency, and support better decision-making in their business operations.",
+    link: "https://github.com/aiinuuazzariaa/revenue-cycle",
+    cover: "",
+    categories: ["web"],
+  },
+  {
+    name: "Zocco Cafe Mobile",
+    desc: "Zocco Cafe Mobile application is designed to provide information about the menu offered by the café, as well as payment options that can be made using cash or QRIS.",
+    cover: "/zocco.png",
+    link: "https://www.figma.com/design/oPyECfQgnWDiy44UkyfMB8/Zocco?node-id=365-32&t=m2LXs2c6u7BZCato-1",
+    categories: ["design", "mobile"],
+  },
+  {
+    name: "ExploreNesia",
+    desc: "ExploreNesia is an Indonesian tourism destination application designed to help users discover, explore, and plan trips to various tourist destinations across the country. The application provides comprehensive information about tourist attractions, including descriptions, locations, main highlights, and recommended activities. In addition, ExploreNesia features search and destination categorization to make it easier for users to choose travel destinations that match their interests and needs.",
+    cover: "",
+    link: "https://github.com/aiinuuazzariaa/explorenesia",
+    categories: ["mobile"],
+  },
+  {
+    name: "GoRef by Groperti",
+    desc: "GoRef is designed to generate income for individuals by allowing them to earn money through property recommendations to people around them.",
+    cover: "/goref.png",
+    link: "https://www.figma.com/design/LGiQI9dfwd78vLHnbHWwSv/GroPerti?node-id=32-2&t=m2LXs2c6u7BZCato-1",
+    categories: ["design"],
+  },
+  {
+    name: "FindPhone Website",
+    desc: "FindPhone website is designed to provide information about electronic products offered by a company.",
+    cover: "/findphone.png",
+    link: "https://www.figma.com/design/nsr7BgdrWhiqP7Fg9MFQkg/FindPhone.?node-id=311-120&t=m2LXs2c6u7BZCato-1",
+    categories: ["design"],
+  },
+  {
+    name: "Lavanya Laundry Website",
+    desc: "The Lavanya Laundry website is designed to provide information about laundry services with an attractive and user-friendly interface.",
+    cover: "/lavanya.png",
+    link: "https://www.figma.com/design/ElzD0is31Wd5eqy4tm87dP/Lavanya-Laundry?node-id=197-2&t=m2LXs2c6u7BZCato-1",
+    categories: ["design"],
+  },
+  {
+    name: "E-Commerce ERIGO",
+    desc: "The Erigo E-Commerce Website is an online sales platform developed by Erigo to market and sell a wide range of products, including fashion apparel and perfumes. The website is designed to provide users with a convenient and seamless shopping experience by presenting detailed product information, attractive visuals, and easy navigation. Through this platform, customers can browse product categories, view product details, and make purchases efficiently, supporting Erigo’s digital business strategy and expanding its market reach.",
+    cover: "/erigo.png",
+    link: "https://www.figma.com/design/wvWoix55q5fAJJvUha8lmB/Erigo?node-id=7-7&t=m2LXs2c6u7BZCato-1",
+    categories: ["design", "web"],
+  },
+  {
+    name: "Universitas Ma Chung Website",
+    desc: "The Ma Chung University website is designed to provide comprehensive information about the university, study programs, news, events, and activities organized by the institution.",
+    cover: "/machung.png",
+    link: "",
+    categories: ["design"],
+  },
+];
+---
+
+<Layout>
+  <Header />
+
+  <section class="py-20 relative overflow-hidden">
+    <img
+      src={svgPinkStar.src}
+      alt="svg"
+      width="60"
+      class="absolute left-4 top-10 opacity-30 pointer-events-none md:opacity-100"
+    />
+    <img
+      src={svgPinkStar.src}
+      alt="svg"
+      width="80"
+      class="absolute right-4 bottom-20 opacity-30 pointer-events-none md:opacity-100"
+    />
+
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-20 relative max-w-xs md:max-w-md mx-auto">
+        <h1 class="text-4xl md:text-5xl font-black relative z-10">Projects</h1>
+        <img
+          src={svgYellowUnderline.src}
+          alt="underline"
+          width="160"
+          class="absolute left-1/2 -translate-x-1/2 -bottom-2 z-0"
+        />
+      </div>
+
+      <div
+        class="flex flex-wrap justify-center gap-3 mb-24"
+        id="filter-buttons"
+      >
+        {
+          categories.map((cat, idx) => (
+            <button
+              data-filter={cat.id}
+              class={`filter-btn px-4 py-2 text-sm md:text-base font-bold border-3 border-black shadow-[3px_3px_0px_#000] cursor-pointer transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] ${
+                idx === 0 ? "bg-[var(--yellow)]" : "bg-white"
+              }`}
+            >
+              {cat.name}
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10" id="projects-grid">
+        {
+          projects.map((proj) => (
+            <a
+              href={port.link}
+              target="_blank"
+              data-categories={proj.categories.join(",")}
+              class="project-card flex flex-col bg-white p-5 group relative transition-all duration-200 hover:shadow-[6px_6px_0px_rgba(0,0,0,0.35)]"
+            >
+              <div class="w-full h-[220px] overflow-hidden border-2 border-black relative bg-[var(--yellow)] flex items-center justify-center">
+                {proj.cover && proj.cover !== "" && proj.cover !== "/" ? (
+                  <img
+                    src={proj.cover}
+                    alt={proj.name}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div class={`w-full h-full flex flex-col items-center justify-center p-4 select-none group-hover:scale-105 transition-transform duration-300 relative overflow-hidden ${
+                    proj.categories.includes("mobile")
+                      ? "bg-[#ff8da1]"
+                      : proj.categories.includes("web")
+                        ? "bg-[#7ae2ff]"
+                        : "bg-[#ffd426]"
+                  }`}>
+                    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#000_2px,transparent_2.5px)] [background-size:16px_16px] pointer-events-none"></div>
+                    <div class="relative bg-white border-3 border-black p-4 rotate-[-3deg] shadow-[4px_4px_0px_#000] flex flex-col items-center gap-2 max-w-[85%]">
+                      <span class="text-5xl filter drop-shadow-[2px_2px_0px_#000]">
+                        {proj.categories.includes("mobile") ? "📱" : proj.categories.includes("web") ? "💻" : "🎨"}
+                      </span>
+                      <span class="text-[10px] font-black uppercase tracking-widest text-white bg-black px-2 py-0.5 border border-black rounded-sm">
+                        {proj.categories[0]}
+                      </span>
+                      <span class="text-xs font-black text-black text-center whitespace-nowrap">
+                        Preview Pending
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div class="space-y-2 pt-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-start gap-4 justify-between pr-2">
+                    <h2 class="text-xl font-bold group-hover:text-[var(--yellow)] transition-colors duration-200 leading-tight">
+                      {proj.name}
+                    </h2>
+                    <img
+                      src={arrowCard.src}
+                      alt="arrow"
+                      width="25"
+                      class="mt-1"
+                    />
+                  </div>
+                  <p class="text-sm text-gray-600 mt-2 leading-relaxed text-justify">
+                    {proj.desc}
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4">
+                  {proj.categories.map((cat) => (
+                    <span class="bg-gray-100 text-[10px] uppercase font-black px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000]">
+                      #{cat}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <Bars />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("#filter-buttons .filter-btn");
+    const cards = document.querySelectorAll("#projects-grid .project-card");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => {
+          b.classList.remove("bg-[var(--yellow)]");
+          b.classList.add("bg-white");
+        });
+
+        btn.classList.remove("bg-white");
+        btn.classList.add("bg-[var(--yellow)]");
+
+        const filter = btn.getAttribute("data-filter") || "all";
+
+        cards.forEach((card) => {
+          const categories =
+            card.getAttribute("data-categories")?.split(",") || [];
+          if (filter === "all" || categories.includes(filter)) {
+            (card as HTMLElement).style.display = "flex";
+          } else {
+            (card as HTMLElement).style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>

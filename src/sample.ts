@@ -1,14 +1,14 @@
 const author = {
   name: `Ainu Azzaria`,
-  nickname: `ainuuazzariaa`,
-  tiktok: `https://www.tiktok.com/@indieteamofone`,
+  nickname: `aiinuuazzariaa`,
+  tiktok: `https://www.tiktok.com/@chocoocandyyz`,
   ig: `https://www.instagram.com/aiinuuazzariaa/`,
-  x: `https://x.com/indieteamofone`,
+  x: `https://x.com/chocoocandyyz`,
   email: "mailto:ainu.azzaria@gmail.com",
 };
 
 const buy = {
-  title: `See My Github`,
+  title: `View Github`,
   link: `https://github.com/aiinuuazzariaa`,
 };
 

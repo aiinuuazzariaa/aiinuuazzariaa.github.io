@@ -1,0 +1,269 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Bars from "../components/Bars.astro";
+
+import svgPinkStar from "../assets/pink-star.svg";
+import svgYellowUnderline from "../assets/underline.svg";
+import logoStar from "../assets/logo-star.svg";
+
+import researchIcon from "../assets/services/research.svg";
+import wireIcon from "../assets/services/wire.svg";
+import uiIcon from "../assets/services/ui.svg";
+import protoIcon from "../assets/services/proto.svg";
+
+const services = [
+  {
+    name: `UI/UX Designer`,
+    company: `PT Eve Teknologi Indonesia`,
+    date: `Mar 2026 - Present`,
+    desc: `• Update components and layout Evetech using Figma.\n• Update components and layout Rasamadu Heritage Dashboard using Figma.\n• Update components and layout Evewash using Figma.\n• Testing Evewash.`,
+    icon: researchIcon,
+  },
+  {
+    name: `Mobile Developer`,
+    company: `PT Thunder Labs Indonesia`,
+    date: `Jan 2026 - Present`,
+    desc: `• Create VernonEdu for Mentor mobile app using Flutter.\n• Create VernonEdu for Student mobile app using Flutter.\n• Create Sahil mobile app using Flutter.\n• Update content website Kanana Retreat.\n• Testing Sahil Dashboard.\n• Create a Data Matching System (SiPaData) using Python.`,
+    icon: wireIcon,
+  },
+  {
+    name: `Graphic Designer`,
+    company: `Kekitaan`,
+    date: `May 2025 - Jun 2025`,
+    desc: `• Create a content based on song lyrics and their meaning.\n• Create a content based on song chords and their meaning.\n• Share a content song lyric or chord in social media.`,
+    icon: uiIcon,
+  },
+  {
+    name: `UI/UX Designer`,
+    company: `PT Flow Byte Digital`,
+    date: `Jan 2025 - Apr 2025`,
+    desc: `• Create a user dashboard page display for the Freelancers Website using Figma.\n• Create a freelancers website order page display and mobile for the Freelancers Website using Figma.\n• Create a project website page display and mobile for the Freelancers Website using Figma.\n• Create a landing page display for students on the Flow Camp Website using Figma.\n• Create a classes studied page display for the Flow Camp Website using Figma.\n• Create a classes completed page display for the Flow Camp Website using Figma.\n• Create a classes camp page display for the Flow Camp Website using Figma.`,
+    icon: protoIcon,
+  },
+  {
+    name: `Frontend Developer`,
+    company: `PT Vokasi Indonesia Sejahtera`,
+    date: `Jun 2022 - Nov 2022`,
+    desc: `• Create a page display for the pesenkamar.com web application using blade php.\n• Create a layout and home page for the quantumbook.id web application using blade php.\n• Create a blog post page admin display for the quantumbook.id web application using blade php.\n• Carry out testing on products to ensure that they work well and meet specified specifications.`,
+    icon: researchIcon,
+  },
+];
+
+const education = [
+  {
+    degree: "Universitas Ma Chung",
+    institution: "Undergraduate Information Systems",
+    date: "2023 - Present",
+    desc:
+      "• Completed Final Exam on Ma Chung University Website Design using Figma. \n" +
+      "• Completed Final Exam on Lavanya Laundry Website Design using Figma. \n" +
+      "• Completed Final Exam on Erigo Store E-Commerce Website Design using Figma. \n" +
+      "• Completed Final Exam on Erigo Store Website using PHP. \n" +
+      "• Completed Final Exam on FindPhone Website Design using Figma. \n" +
+      "• Completed Final Exam on Zocco Menu Design using Figma. \n" +
+      "• Completed Final Exam on Revenue Cycle System using Laravel. \n" +
+      "• Completed Final Exam on PlayArena using Java. \n" +
+      "• Completed Final Exam on ExploreNesia using Java.",
+  },
+  {
+    degree: "SMK Telkom Malang",
+    institution: "Software Engineering",
+    date: "2020 - 2023",
+    desc: "• Completed a Level Up Exam on Object Based Programming (Java). \n• Completed Level Up Exam on Simple Website Development using HTML, CSS, PHP. \n• Completed the Level Up Exam on Website Development (Framework) using Laravel and Vue JS.",
+  },
+];
+---
+
+<Layout>
+  <Header />
+
+  <section class="py-20 relative overflow-hidden">
+    <img
+      src={svgPinkStar.src}
+      alt="svg"
+      width="60"
+      class="absolute left-4 top-10 opacity-30 pointer-events-none md:opacity-100"
+    />
+    <img
+      src={svgPinkStar.src}
+      alt="svg"
+      width="80"
+      class="absolute right-4 bottom-20 opacity-30 pointer-events-none md:opacity-100"
+    />
+
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-20 relative max-w-xs md:max-w-md mx-auto">
+        <h1 class="text-4xl md:text-5xl font-black relative z-10">About Me</h1>
+        <img
+          src={svgYellowUnderline.src}
+          alt="underline"
+          width="180"
+          class="absolute left-1/2 -translate-x-1/2 -bottom-2 z-0"
+        />
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-[32%_68%] gap-10 items-start mb-24"
+      >
+        <div
+          class="relative p-6 bg-white border-3 border-black shadow-[6px_6px_0px_#000]"
+        >
+          <div
+            class="w-full aspect-square border-2 border-black overflow-hidden relative mb-4"
+          >
+            <img
+              src="/profile.jpeg"
+              alt="Ainu Azzaria"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="text-center">
+            <span
+              class="inline-block bg-pink-200 px-3 py-1 font-bold border-2 border-black text-sm uppercase shadow-[2px_2px_0px_#000]"
+            >
+              Ainu Azzaria
+            </span>
+            <p class="text-xs text-gray-500 mt-2 font-medium">
+              UI / UX Designer | Mobile Developer | Undergraduate Information
+              Systems Student
+            </p>
+          </div>
+          <Bars />
+        </div>
+
+        <div
+          class="bg-white p-6 md:p-8 border-3 border-black shadow-[8px_8px_0px_#000] relative"
+        >
+          <div class="flex items-center gap-2 mb-4">
+            <img src={logoStar.src} alt="star" width="24" />
+            <h2 class="text-2xl font-black uppercase">Hi! I'm Ainu</h2>
+          </div>
+          <div
+            class="space-y-4 text-justify leading-relaxed text-sm md:text-base"
+          >
+            <p>
+              Undergraduate of Information Systems with a passion for mobile
+              application development. Extensive experience and understanding of
+              application development using Java and the Flutter framework.
+              Develop her skills in designing, building, and optimizing
+              efficient, user-centric mobile applications.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              class="bg-[var(--blue)] px-3 py-1 text-xs font-bold border-2 border-black rounded-sm shadow-[2px_2px_0px_#000]"
+              >#UIUXDesign</span
+            >
+            <span
+              class="bg-[var(--yellow)] px-3 py-1 text-xs font-bold border-2 border-black rounded-sm shadow-[2px_2px_0px_#000]"
+              >#MobileDeveloper</span
+            >
+            <span
+              class="bg-pink-200 px-3 py-1 text-xs font-bold border-2 border-black rounded-sm shadow-[2px_2px_0px_#000]"
+              >#Flutter</span
+            >
+            <span
+              class="bg-green-200 px-3 py-1 text-xs font-bold border-2 border-black rounded-sm shadow-[2px_2px_0px_#000]"
+              >#Figma</span
+            >
+          </div>
+          <Bars />
+        </div>
+      </div>
+
+      <div class="mb-24">
+        <div class="flex items-center justify-center gap-2 mb-10">
+          <h2
+            class="text-2xl md:text-3xl font-black uppercase bg-[var(--yellow)] px-4 py-1 border-3 border-black shadow-[4px_4px_0px_#000]"
+          >
+            Education
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+          {
+            education.map((item) => (
+              <div class="bg-white p-6 border-3 border-black shadow-[6px_6px_0px_#000] relative">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-black pb-3 mb-4">
+                  <div>
+                    <h3 class="text-lg md:text-xl font-bold">{item.degree}</h3>
+                    <p class="text-sm md:text-md text-gray-700 font-semibold">
+                      {item.institution}
+                    </p>
+                  </div>
+                  <span class="self-start sm:self-center bg-[var(--blue)] px-3 py-1 text-xs font-bold border-2 border-black shadow-[2px_2px_0px_#000] whitespace-nowrap">
+                    {item.date}
+                  </span>
+                </div>
+                <p class="text-sm md:text-base text-justify whitespace-pre-line leading-relaxed">
+                  {item.desc}
+                </p>
+                <Bars />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 mb-10">
+          <div class="flex items-end">
+            <h1 class="text-4xl">Work Experience</h1>
+            <svg
+              class="size-20"
+              viewBox="0 0 37 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.5479 4.4031C18.6713 5.80238 19.9271 9.81219 21.7001 11.2897C23.0602 12.3947 24.0665 11.888 24.3315 9.94798C24.6359 7.90326 23.1377 5.00064 21.4323 4.27109C20.1328 3.70088 19.9764 3.72964 19.5479 4.4031Z"
+                fill="black"></path>
+              <path
+                d="M7.84038 5.33376C6.96374 6.73304 8.21957 10.7429 9.99262 12.2204C11.3527 13.3254 12.359 12.8186 12.624 10.8786C12.9284 8.83392 11.4302 5.9313 9.72476 5.20175C8.42528 4.63154 8.26883 4.66031 7.84038 5.33376Z"
+                fill="black"></path>
+              <path
+                d="M2.88193 16.7075C3.24136 18.9226 7.35405 23.0018 11.0101 24.7375C12.1376 25.3003 14.0826 25.7031 15.8021 25.7769C18.5025 25.8751 18.8859 25.7851 22.3741 24.1786C25.7215 22.637 26.2387 22.2689 27.844 20.4042C29.889 17.9907 31.8424 12.8058 31.2223 11.3601C30.6796 10.095 29.8918 10.7176 28.3133 13.8252C26.5656 17.2272 25.5918 18.4981 23.558 19.9541C21.6144 21.3254 17.9796 22.3934 15.6935 22.2776C12.9776 22.1433 7.87127 19.3874 5.0947 16.5541C3.68105 15.1275 2.64514 15.1717 2.88193 16.7075Z"
+                fill="black"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {
+            services.map((item) => (
+              <div class="bg-white p-6 border-3 border-black shadow-[6px_6px_0px_#000] flex flex-col justify-between relative group hover:translate-y-[-2px] transition-transform">
+                <div>
+                  <div class="flex justify-between items-start gap-4 mb-4">
+                    <div class="flex items-center gap-3">
+                      <img src={item.icon.src} width="40" alt="icon" />
+                      <div>
+                        <h3 class="text-md md:text-lg font-bold group-hover:text-[var(--yellow)] transition-colors duration-200">
+                          {item.name}
+                        </h3>
+                        <p class="text-xs md:text-sm font-medium text-gray-700">
+                          {item.company}
+                        </p>
+                      </div>
+                    </div>
+                    <span class="bg-yellow-100 text-[10px] md:text-xs font-bold px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000] whitespace-nowrap">
+                      {item.date}
+                    </span>
+                  </div>
+                  <p class="text-xs md:text-sm text-justify whitespace-pre-line leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+                <Bars />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
